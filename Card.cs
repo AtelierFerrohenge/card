@@ -6,6 +6,7 @@ public abstract partial class Card : Node
 {
 	private bool _shown;
 
+	// May need to make into array for multiplayer or vs AI
 	[Export]
 	public bool Shown
 	{
