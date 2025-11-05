@@ -1,7 +1,6 @@
 using Godot;
 using System;
 
-[GlobalClass]
 public abstract partial class Card : Node
 {
 	private bool _shown;
