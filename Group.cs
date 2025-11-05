@@ -1,9 +1,9 @@
 using Godot;
 using System;
 
-public abstract partial class Group : Node
+public partial class Group : Node
 {
-	public void GetCard(Card card)
+	public virtual void ReceiveCard(Card card)
 	{
 		card.Reparent(this);
 	}

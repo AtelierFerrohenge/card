@@ -1,6 +1,8 @@
 using Godot;
 using System;
 
-public abstract partial class Hand : Group
+public partial class Hand : Group
 {
+	[Export]
+	public string PlayerId { get; set; }
 }
