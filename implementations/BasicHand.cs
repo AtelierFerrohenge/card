@@ -7,6 +7,6 @@ public partial class BasicHand : Hand
 	public override void AddCard(Card card)
 	{
 		base.AddCard(card);
-		card.ShowToPlayer(PlayerId);
+		card.ShowToPlayer(_player.PlayerId);
 	}
 }
