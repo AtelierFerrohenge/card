@@ -4,12 +4,12 @@ extends CardGroup
 
 func get_top_card() -> CardInfo:
 	# Implement no cards or deck out
-	return _cards.back()
+	return _cards[-1]
 
 
 func get_bottom_card() -> CardInfo:
 	# Implement no cards or deck out
-	return _cards.front()
+	return _cards[0]
 
 
 func add_card_to_bottom(card: CardInfo) -> void:

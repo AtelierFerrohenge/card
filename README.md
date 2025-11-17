@@ -1,6 +1,7 @@
 # card
 
 Next Priorities:
+	Complete card_stack update after the last card_group update
 	Add a testing "draw" button
 	Make methods in abstract classes virtual or abstract so they can be overridden
 	Don't force the playerId to be an int
