@@ -24,3 +24,7 @@ func remove_card(card: CardInfo) -> void:
 func get_random_card() -> CardInfo:
 	# Consider using RandomNumberGenerator
 	return _cards.pick_random()
+
+
+func get_card_count() -> int:
+	return _cards.size()
