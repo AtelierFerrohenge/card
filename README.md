@@ -6,3 +6,4 @@ Next Priorities:
 	Don't force the playerId to be an int
 	Consider splitting the CardPhase system into a general FSM system
 		Also check if that doesn't already exist somewhere in a form I like
+	Add a way to restrict cards from a group
