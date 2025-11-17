@@ -12,11 +12,10 @@ func get_bottom_card() -> CardInfo:
 	return _cards[0]
 
 
-func add_card_to_bottom(card: CardInfo) -> void:
-	# Quick implementation - reimplement later with card_group add_card changes too
-	add_card(card)
-	var bottom: CardInfo = get_bottom_card()
-	_cards[0] = card
-	_cards[-1] = bottom
-	card.group_index = 0
-	bottom.group_index = _cards.size() - 1
+func add_card_to_array(card: CardInfo, index: int = -1) -> void:
+	var result: int = _cards.insert(index, card)
+	assert(result == OK, "Card insertion failed.")
+
+
+func remove_card_from_array(index: int) -> CardInfo:
+	return _cards.pop_at(index)

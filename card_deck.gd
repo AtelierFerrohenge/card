@@ -1,7 +1,7 @@
 class_name CardDeck
 extends CardStack
 
-var _shuffled := CardGroup.new()
+var _shuffled := CardPool.new()
 var _bottom := CardStack.new()
 
 

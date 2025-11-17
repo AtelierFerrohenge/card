@@ -1,25 +1,27 @@
+@abstract
 class_name CardGroup
 extends Resource
 
 var _cards: Array[CardInfo] = []
 
 
+@abstract func add_card_to_array(card: CardInfo, index: int = -1) -> void
+
+
 func add_card(card: CardInfo, index: int = -1) -> void:
 	if card.group != null:
 		assert(card.group != self, "The card is already in this group.")
 		card.group.remove(card)
-	if index != -1:
-		card = _replace_card(card, index)
-	_push_back(card)
+	add_card_to_array(card, index)
+
+
+@abstract func remove_card_from_array(index: int) -> CardInfo
 
 
 func remove_card(card: CardInfo) -> void:
 	assert(card.group == self, "The card is not in this group.")
-	var index: int = card.group_index
-	var swap_card: CardInfo = _pop_back()
-	if index != _cards.size():
-		swap_card = _replace_card(swap_card, index)
-	assert(swap_card == card, "The card has the wrong group index.")
+	var removed_card: CardInfo = remove_card_from_array(card.group_index)
+	assert(removed_card == card, "The wrong card was removed.")
 
 
 func get_random_card() -> CardInfo:
