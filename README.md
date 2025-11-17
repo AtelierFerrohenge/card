@@ -7,3 +7,5 @@ Next Priorities:
 	Consider splitting the CardPhase system into a general FSM system
 		Also check if that doesn't already exist somewhere in a form I like
 	Add a way to restrict cards from a group
+	Consider making backing (non-Node) classes not Resources
+	Add deck out functionality
