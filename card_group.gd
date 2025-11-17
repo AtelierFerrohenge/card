@@ -19,3 +19,8 @@ func remove_card(card: CardInfo) -> void:
 	var back: CardInfo = _cards.pop_back()
 	if card.group_index != _cards.size() - 1:
 		_cards[card.group_index] = back
+
+
+func get_random_card() -> CardInfo:
+	# Consider using RandomNumberGenerator
+	return _cards.pick_random()
