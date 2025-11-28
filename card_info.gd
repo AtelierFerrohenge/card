@@ -1,5 +1,5 @@
 class_name CardInfo
-extends Resource
+extends Node
 
 var group: CardGroup = null
 var group_index: int = -1

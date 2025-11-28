@@ -1,6 +1,6 @@
 @abstract
 class_name CardGroup
-extends Resource
+extends Node
 
 var _cards: Array[CardInfo] = []
 
