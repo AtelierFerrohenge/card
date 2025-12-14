@@ -1,4 +1,4 @@
-class_name CardInfo
+class_name Card
 extends Node
 
 signal update_visuals(show_to: int)

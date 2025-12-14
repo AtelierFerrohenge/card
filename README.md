@@ -2,6 +2,7 @@
 
 Next Priorities:
 	Complete card_deck update after card_group abstraction
+	Organize cards with nodes rather than collections
 	Add a testing "draw" button
 	Make methods in abstract classes virtual or abstract so they can be overridden
 	Don't force the playerId to be an int
