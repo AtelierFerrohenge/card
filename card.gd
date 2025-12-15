@@ -3,7 +3,6 @@ extends Node
 
 signal update_visuals(show_to: int)
 
-# Make this a Dictionary representation
 var _shown_to: int = 0:
 	set = set_shown_to
 
