@@ -4,7 +4,7 @@ extends Node
 
 @export var visual_card_scene: PackedScene
 
-var _shown_to: int = 0:
+var shown_to: int = 0:
 	set = _set_shown_to
 
 var _visual_card: Node
@@ -18,19 +18,20 @@ func _ready() -> void:
 
 
 func show_to_player(id: int) -> void:
-	_shown_to |= 1 << id
+	shown_to |= 1 << id
 
 
 func hide_from_player(id: int) -> void:
-	_shown_to &= ~(1 << id)
-
-
-@abstract func _on_visual_card_ready() -> void
+	shown_to &= ~(1 << id)
 
 
 @abstract func _update_shown_to_visual() -> void
 
 
 func _set_shown_to(value: int) -> void:
-	_shown_to = value
+	shown_to = value
+	_update_shown_to_visual()
+
+
+func _on_visual_card_ready() -> void:
 	_update_shown_to_visual()
