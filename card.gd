@@ -2,6 +2,7 @@
 class_name Card
 extends Node
 
+# Consider allowing multiple simultaneus visuals
 @export var _visual_card_scene: PackedScene = null
 
 var visual_card: Node = null
