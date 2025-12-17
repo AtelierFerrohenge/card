@@ -1,9 +1,9 @@
 class_name CardDeck
 extends CardStack
 
-var _top := CardStack.new()
-var _middle := CardGroup.new()
 var _bottom := CardStack.new()
+var _middle := CardGroup.new()
+var _top := CardStack.new()
 
 
 func _init() -> void:
@@ -28,6 +28,15 @@ func get_random_card() -> Card:
 func remove_card(card: Card) -> void:
 	# To Do
 	pass
+
+
+func get_cards() -> Array[Node]:
+	# Try to convert to Array[Card]
+	# Consider optimizing
+	var result: Array[Node] = _bottom.get_cards()
+	result.append_array(_middle.get_cards())
+	result.append_array(_top.get_cards())
+	return result
 
 
 func transfer_card_to_top(card: Card) -> void:
