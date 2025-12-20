@@ -3,6 +3,7 @@
 Next Priorities:
 	Rework shadow + visual node system into resource + visual node system
 	Split a mixin base class out of visibility and card_suit
+		Do this once I start migrating to a strongly typed language
 	Review the below
 	Complete card_deck update after card_group abstraction
 	Organize cards with nodes rather than collections
