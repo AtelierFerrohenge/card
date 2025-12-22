@@ -1,5 +1,5 @@
 @tool
-class_name CardRank
+class_name CardRankOld
 extends Resource
 
 signal rank_changed(new_suit: Rank)

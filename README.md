@@ -15,3 +15,16 @@ Next Priorities:
 	Add a way to restrict cards from a group
 	Consider making backing (non-Node) classes not Resources
 	Add deck out functionality
+
+Reviewed parts of godot-cpp-template:
+	godot-cpp
+	src
+		???
+	.gitmodules
+	LICENSE.md
+	README.md
+	SConstruct
+	methods.py
+
+	Need to review differences between SConstruct file of tutorial and template
+	Need to review differences between .gdextension file of tutorial and template, primarily reloadable = true
