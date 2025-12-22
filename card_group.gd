@@ -1,48 +1,36 @@
+@tool
 class_name CardGroup
-extends Node
+extends Resource
 
-@export var _visual_card_group_scene: PackedScene = null
+# Research if std::map can represent both
+var _card_lookup: Dictionary[Card, int] = {}
+var _cards_order: Array[Card] = []
 
-var _visual_card_group: Node = null
 
-
-func _ready() -> void:
-	if _visual_card_group_scene != null:
-		_visual_card_group = _visual_card_group_scene.instantiate()
-		_visual_card_group.ready.connect(_on_visual_card_group_ready)
-		# Temporarily use get_parent()
-		get_parent().add_child.call_deferred(_visual_card_group)
+func _init() -> void:
+	resource_local_to_scene = true
 
 
 func transfer_card(card: Card) -> void:
-	if card.get_parent() == null:
-		add_child(card)
-	else:
-		card.reparent(self)
-
-
-func get_card_count() -> int:
-	return get_child_count()
+	# Review if calling an unrelated object's signal
+	# is a good idea
+	# Still need to hook this up
+	card.transferred.emit()
+	_card_lookup[card] = _cards_order.size()
+	_cards_order.append(card)
 
 
 func is_empty() -> bool:
-	return get_card_count() == 0
+	return _cards_order.size() == 0
 
 
 func get_random_card() -> Card:
-	return null if is_empty() else get_child(randi() % get_card_count())
-
-
-func get_cards() -> Array[Node]:
-	# Try to convert to Array[Card]
-	return get_children()
+	return null if is_empty() else _cards_order.pick_random()
 
 
 func remove_card(card: Card) -> void:
-	assert(card.get_parent() == self, "The card is not in this group.")
-	remove_child(card)
-
-
-func _on_visual_card_group_ready() -> void:
-	for card: Card in get_cards():
-		_visual_card_group.add_child(card.visual_card)
+	# Guardrail against removing cards not part of the group
+	# Optimize this with swapping for unordered groups
+	# if std::map doesn't work
+	_cards_order.remove_at(_card_lookup[card])
+	_card_lookup.erase(card)
