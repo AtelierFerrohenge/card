@@ -1,4 +1,4 @@
-#include "card_rank.h"
+#include "standard_card_rank.h"
 
 StandardCardRank::StandardCardRank() {
     set_local_to_scene(true);
@@ -21,8 +21,8 @@ void StandardCardRank::init_signals(Callable p_callable) {
 }
 
 void StandardCardRank::_bind_methods() {
-    ClassDB::bind_method(D_METHOD("get_rank"), &StandardCardRank::get_rank);
     ClassDB::bind_method(D_METHOD("set_rank", "p_rank"), &StandardCardRank::set_rank);
+    ClassDB::bind_method(D_METHOD("get_rank"), &StandardCardRank::get_rank);
     ClassDB::bind_method(D_METHOD("init_signals", "p_callable"), &StandardCardRank::init_signals);
 
     // Make sure Variant::INT is the best choice here
