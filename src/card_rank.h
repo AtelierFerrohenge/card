@@ -24,11 +24,14 @@ public:
         RANK_ACE,
     };
 
-    StandardCardRank() = default;
+    StandardCardRank();
     ~StandardCardRank() override = default;
 
+    // Review if setter can and should be private
     void set_rank(Rank p_rank);
     Rank get_rank() const;
+
+    void init_signals(Callable p_callable);
 
 protected:
     static void _bind_methods();
