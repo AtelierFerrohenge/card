@@ -1,11 +1,11 @@
 #pragma once
 
-#include "godot_cpp/classes/resource.hpp"
+#include "signal_prop_mixin.h"
 
 using namespace godot;
 
-class StandardCardSuit : public Resource {
-    GDCLASS(StandardCardSuit, Resource)
+class StandardCardSuit : public SignalPropMixin {
+    GDCLASS(StandardCardSuit, SignalPropMixin)
 
 public:
     enum Suit {
@@ -15,7 +15,7 @@ public:
         SUIT_DIAMOND,
     };
 
-    StandardCardSuit();
+    StandardCardSuit() = default;
     ~StandardCardSuit() override = default;
 
     // Review if setter can and should be private

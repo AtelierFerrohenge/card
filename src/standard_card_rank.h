@@ -1,11 +1,11 @@
 #pragma once
 
-#include "godot_cpp/classes/resource.hpp"
+#include "signal_prop_mixin.h"
 
 using namespace godot;
 
-class StandardCardRank : public Resource {
-    GDCLASS(StandardCardRank, Resource)
+class StandardCardRank : public SignalPropMixin {
+    GDCLASS(StandardCardRank, SignalPropMixin)
 
 public:
     enum Rank {
@@ -24,7 +24,7 @@ public:
         RANK_ACE,
     };
 
-    StandardCardRank();
+    StandardCardRank() = default;
     ~StandardCardRank() override = default;
 
     // Review if setter can and should be private
