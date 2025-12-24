@@ -6,6 +6,7 @@
 #include <godot_cpp/core/defs.hpp>
 #include <godot_cpp/godot.hpp>
 
+#include "card_visibility.h"
 #include "standard_card_rank.h"
 #include "standard_card_suit.h"
 
@@ -16,6 +17,7 @@ void initialize_gdextension_types(ModuleInitializationLevel p_level)
     if (p_level != MODULE_INITIALIZATION_LEVEL_SCENE) {
         return;
     }
+    GDREGISTER_CLASS(CardVisibility);
     GDREGISTER_CLASS(StandardCardSuit);
     GDREGISTER_CLASS(StandardCardRank);
 }
