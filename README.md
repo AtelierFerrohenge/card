@@ -2,8 +2,10 @@
 
 Next Priorities:
 	Rework shadow + visual node system into resource + visual node system
-	Split a mixin base class out of visibility and card_suit
-		Do this once I start migrating to a strongly typed language
+		Undo rework - bring back shadow system as it's the only one that allows
+		one to many data to visual relationships with the option to set values
+		in the editor
+	Convert visibility to some sort of set of players and make an editor representation for it
 	Review the below
 	Complete card_deck update after card_group abstraction
 	Organize cards with nodes rather than collections
