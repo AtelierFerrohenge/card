@@ -6,9 +6,9 @@
 #include <godot_cpp/core/defs.hpp>
 #include <godot_cpp/godot.hpp>
 
-#include "card_visibility.h"
-#include "standard_card_rank.h"
-#include "standard_card_suit.h"
+#include "mixins/card_visibility.h"
+#include "mixins/standard_card_rank.h"
+#include "mixins/standard_card_suit.h"
 
 using namespace godot;
 
