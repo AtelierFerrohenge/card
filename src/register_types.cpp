@@ -7,6 +7,7 @@
 #include <godot_cpp/godot.hpp>
 
 #include "card.h"
+#include "card_group.h"
 #include "mixins/card_visibility.h"
 #include "mixins/standard_card_rank.h"
 #include "mixins/standard_card_suit.h"
@@ -19,6 +20,7 @@ void initialize_gdextension_types(ModuleInitializationLevel p_level)
         return;
     }
     GDREGISTER_CLASS(Card);
+    GDREGISTER_CLASS(CardGroup);
     GDREGISTER_CLASS(CardVisibility);
     GDREGISTER_CLASS(StandardCardSuit);
     GDREGISTER_CLASS(StandardCardRank);

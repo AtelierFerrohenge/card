@@ -1,5 +1,5 @@
 @tool
-class_name CardGroup
+class_name CardGroupOld
 extends Resource
 
 # Research if std::map can represent both
