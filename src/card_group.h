@@ -15,6 +15,8 @@ public:
     ~CardGroup() override = default;
 
     void transfer_card(Card *p_card);
+    bool is_empty();
+    Card *get_random_card();
     void erase_card(Card *p_card);
 
 protected:
