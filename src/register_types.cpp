@@ -8,6 +8,7 @@
 
 #include "card.h"
 #include "card_group.h"
+#include "card_stack.h"
 #include "mixins/card_visibility.h"
 #include "mixins/standard_card_rank.h"
 #include "mixins/standard_card_suit.h"
@@ -21,6 +22,7 @@ void initialize_gdextension_types(ModuleInitializationLevel p_level)
     }
     GDREGISTER_CLASS(Card);
     GDREGISTER_CLASS(CardGroup);
+    GDREGISTER_CLASS(CardStack);
     GDREGISTER_CLASS(CardVisibility);
     GDREGISTER_CLASS(StandardCardSuit);
     GDREGISTER_CLASS(StandardCardRank);
