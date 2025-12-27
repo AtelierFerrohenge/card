@@ -46,6 +46,10 @@ bool CardGroup::is_empty() const {
 }
 
 void CardGroup::_bind_methods() {
+    ClassDB::bind_method(D_METHOD("transfer_card", "card"), &CardGroup::transfer_card);
+    ClassDB::bind_method(D_METHOD("get_card_count"), &CardGroup::get_card_count);
+    ClassDB::bind_method(D_METHOD("get_random_card"), &CardGroup::get_random_card);
+    ClassDB::bind_method(D_METHOD("erase_card", "card"), &CardGroup::erase_card);
     ClassDB::bind_method(D_METHOD("is_empty"), &CardGroup::is_empty);
 
     GDVIRTUAL_BIND(_transfer_card, "card");

@@ -14,11 +14,16 @@ public:
     CardStack() = default;
     ~CardStack() override = default;
 
-    void transfer_card_to_top(Card *p_card);
-    void transfer_card_to_bottom(Card *p_card);
-    Card *get_top_card();
-    Card *get_bottom_card();
+    virtual void transfer_card_to_top(Card *p_card);
+    virtual void transfer_card_to_bottom(Card *p_card);
+    virtual Card *get_top_card() const;
+    virtual Card *get_bottom_card() const;
 
 protected:
     static void _bind_methods();
+
+    GDVIRTUAL1(_transfer_card_to_top, Card *)
+    GDVIRTUAL1(_transfer_card_to_bottom, Card *)
+    GDVIRTUAL0RC(Card *, _get_top_card)
+    GDVIRTUAL0RC(Card *, _get_bottom_card)
 };
