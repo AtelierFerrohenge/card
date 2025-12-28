@@ -14,9 +14,9 @@ void CardGroup::transfer_card(Card *p_card) {
 }
 
 int CardGroup::get_card_count() const {
-    int card_count = 0;
-    if(GDVIRTUAL_CALL(_get_card_count, card_count)) {
-        return card_count;
+    int count = 0;
+    if(GDVIRTUAL_CALL(_get_card_count, count)) {
+        return count;
     }
 
     return get_child_count();

@@ -1,4 +1,4 @@
-class_name CardDeck
+class_name CardDeckOld
 extends CardStack
 
 var _bottom := CardStack.new()
