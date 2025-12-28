@@ -23,8 +23,7 @@ Card *CardStack::get_top_card() const {
         return card;
     }
 
-    // Review if (Card *) is the best way to cast this
-    return is_empty() ? nullptr : (Card *)get_child(-1);
+    return is_empty() ? nullptr : cast_to<Card>(get_child(-1));
 }
 
 Card *CardStack::get_bottom_card() const {
@@ -33,8 +32,7 @@ Card *CardStack::get_bottom_card() const {
         return card;
     }
 
-    // Review if (Card *) is the best way to cast this
-    return is_empty() ? nullptr : (Card *)get_child(0);
+    return is_empty() ? nullptr : cast_to<Card>(get_child(0));
 }
 
 void CardStack::_bind_methods() {
