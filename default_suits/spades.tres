@@ -1,0 +1,4 @@
+[gd_resource type="CardSuit" format=3 uid="uid://sbpy35lbeped"]
+
+[resource]
+suit = &"Spades"

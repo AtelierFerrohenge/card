@@ -7,7 +7,8 @@
 #include <godot_cpp/godot.hpp>
 
 #include "card.h"
-#include "standard_playing_card.h"
+#include "mixins/card_suit.h"
+#include "mixins/card_rank.h"
 #include "card_group.h"
 #include "card_stack.h"
 #include "card_deck.h"
@@ -21,7 +22,8 @@ void initialize_gdextension_types(ModuleInitializationLevel p_level)
         return;
     }
     GDREGISTER_CLASS(Card);
-    GDREGISTER_CLASS(StandardPlayingCard);
+    GDREGISTER_CLASS(CardSuit);
+    GDREGISTER_CLASS(CardRank);
     GDREGISTER_CLASS(CardGroup);
     GDREGISTER_CLASS(CardStack);
     GDREGISTER_CLASS(CardDeck);

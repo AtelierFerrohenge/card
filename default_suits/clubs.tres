@@ -1,0 +1,4 @@
+[gd_resource type="CardSuit" format=3 uid="uid://cq5q7vc1e8tx"]
+
+[resource]
+suit = &"Clubs"

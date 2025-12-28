@@ -1,0 +1,4 @@
+[gd_resource type="CardSuit" format=3 uid="uid://dsg6ij3wlpyux"]
+
+[resource]
+suit = &"Hearts"
