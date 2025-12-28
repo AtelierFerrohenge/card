@@ -28,7 +28,7 @@ Card *CardGroup::get_random_card() const {
         return card;
     }
 
-    return is_empty() ? nullptr : cast_to<Card>(get_child(UtilityFunctions::randi() % get_child_count()));
+    return is_empty() ? nullptr : cast_to<Card>(get_child(UtilityFunctions::randi() % get_card_count()));
 }
 
 // This doesn't actually delete the card, so may need to implement that later

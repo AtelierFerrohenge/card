@@ -1,6 +1,9 @@
 # card
 
 Next Priorities:
+	Rewrite card deck to have a single data structure tracking all "known" cards rather than
+	just the top or bottom
+	Remove unnecessary GDScript virtuals and unbind C++ virtual overrides
 	Clean up C++ headers - figure out if minimum possible or duplicated whenever used in the same file
 	is better
 	Convert visibility to some sort of set of players and make an editor representation for it

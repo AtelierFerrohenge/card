@@ -7,12 +7,11 @@
 #include <godot_cpp/godot.hpp>
 
 #include "card.h"
+#include "standard_playing_card.h"
 #include "card_group.h"
 #include "card_stack.h"
 #include "card_deck.h"
 #include "mixins/card_visibility.h"
-#include "mixins/standard_card_rank.h"
-#include "mixins/standard_card_suit.h"
 
 using namespace godot;
 
@@ -22,12 +21,11 @@ void initialize_gdextension_types(ModuleInitializationLevel p_level)
         return;
     }
     GDREGISTER_CLASS(Card);
+    GDREGISTER_CLASS(StandardPlayingCard);
     GDREGISTER_CLASS(CardGroup);
     GDREGISTER_CLASS(CardStack);
     GDREGISTER_CLASS(CardDeck);
     GDREGISTER_CLASS(CardVisibility);
-    GDREGISTER_CLASS(StandardCardSuit);
-    GDREGISTER_CLASS(StandardCardRank);
 }
 
 void uninitialize_gdextension_types(ModuleInitializationLevel p_level) {
