@@ -6,7 +6,6 @@ from methods import print_error
 
 
 libname = "EXTENSION-NAME"
-projectdir = "demo"
 
 localEnv = Environment(tools=["default"], PLATFORM="")
 
@@ -59,7 +58,4 @@ library = env.SharedLibrary(
     source=sources,
 )
 
-copy = env.Install("{}/bin/{}/".format(projectdir, env["platform"]), library)
-
-default_args = [library, copy]
-Default(*default_args)
+Default(library)

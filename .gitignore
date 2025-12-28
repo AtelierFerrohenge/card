@@ -26,20 +26,20 @@ mono_crash.*.json
 .godot/
 
 # Ignore library files but not the gdextension file
-demo/bin/*
-!demo/bin/android
-demo/bin/android/*
-!demo/bin/android/.gitkeep
-!demo/bin/linux
-demo/bin/linux/*
-!demo/bin/linux/.gitkeep
-!demo/bin/macos
-demo/bin/macos/*
-!demo/bin/macos/.gitkeep
-!demo/bin/windows
-demo/bin/windows/*
-!demo/bin/windows/.gitkeep
-!demo/bin/*.gdextension
+bin/*
+!bin/android
+bin/android/*
+!bin/android/.gitkeep
+!bin/linux
+bin/linux/*
+!bin/linux/.gitkeep
+!bin/macos
+bin/macos/*
+!bin/macos/.gitkeep
+!bin/windows
+bin/windows/*
+!bin/windows/.gitkeep
+!bin/*.gdextension
 .sconsign*.dblite
 
 # Ignore custom.py
@@ -83,9 +83,3 @@ compile_commands.json
 # Cmake
 cmake-build*
 CMakeUserPresets.json
-
-# PERSONAL ADDITION
-bin/*
-!bin/macos
-bin/macos/*
-!bin/macos/.gitkeep
