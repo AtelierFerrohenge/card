@@ -6,6 +6,8 @@ Next Priorities:
 		Quickly implemented, need to go back through and clean things up
 		Then split the functionality into a base class for suit and rank
 		Or perhaps do away with suit and rank altogether and just use the base
+		Or even merge the functionality back into Card for a sort of dynamic enums
+		base class
 	Rewrite card deck to have a single data structure tracking all "known" cards rather than
 	just the top or bottom
 	Remove unnecessary GDScript virtuals and unbind C++ virtual overrides
