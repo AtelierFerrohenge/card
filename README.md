@@ -1,6 +1,15 @@
 # card
 
 Next Priorities:
+	Ignore the below task and...
+		Move the functionality into Card itself with the ability to add multiple of these properties
+		stored within a dictionary
+		Step 1. Figure out how dictionaries are used in Godot C++ and make one with string (or string name) to int
+		Step 2. Link _get and _set of Card to this dictionary
+		Step 3. Make a modified version of get_suits in Card with type string to string array dictionary
+		Step 4. Iterate this second dictionary in _get_property_list to generate enums
+		Step 5. Optional for now - add prefixes to custom property names to determine if they're meant to be enums
+			or other properties to allow for complete custom properties
 	Improve rank and suit mixins further by pulling values from a dynamic dictionary that
 	can be modified in the editor but shows up as an enum dropdown
 		Quickly implemented, need to go back through and clean things up
