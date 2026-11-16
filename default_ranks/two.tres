@@ -1,3 +1,4 @@
 [gd_resource type="CardRank" format=3 uid="uid://8jdn3eq73oct"]
 
 [resource]
+rank = &"Two"
