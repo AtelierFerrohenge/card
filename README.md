@@ -1,7 +1,9 @@
 # card
 
 Next Priorities:
-	Look into EditorInspectorPlugin for known suits/ranks/etc. dropdown features
+	Look into EditorInspectorPlugin to implement known suits/ranks/etc. dropdown features
+	CardVisibility might need some tweaks as it's a stateful Resource right now
+
 	Need to review the below - possibly outdated:
 	Rewrite card deck to have a single data structure tracking all "known" cards rather than
 	just the top or bottom
