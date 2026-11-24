@@ -6,6 +6,8 @@ void CardStack::transfer_card_to_top(Card *p_card) {
     }
 
     transfer_card(p_card);
+    // emit_signal(SceneStringName(top_changed), p_card);
+    emit_signal("top_changed", p_card);
 }
 
 void CardStack::transfer_card_to_bottom(Card *p_card) {
@@ -40,6 +42,8 @@ void CardStack::_bind_methods() {
     ClassDB::bind_method(D_METHOD("transfer_card_to_bottom", "card"), &CardStack::transfer_card_to_bottom);
     ClassDB::bind_method(D_METHOD("get_top_card"), &CardStack::get_top_card);
     ClassDB::bind_method(D_METHOD("get_bottom_card"), &CardStack::get_bottom_card);
+
+    ADD_SIGNAL(MethodInfo("top_changed", PropertyInfo(Variant::OBJECT, "card", PROPERTY_HINT_RESOURCE_TYPE, Card::get_class_static())));
 
     GDVIRTUAL_BIND(_transfer_card_to_top, "card");
     GDVIRTUAL_BIND(_transfer_card_to_bottom, "card");
