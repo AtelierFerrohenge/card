@@ -11,7 +11,7 @@ void CardGroup::transfer_card(Card *p_card) {
     } else {
         p_card->reparent(this);
     }
-    p_card->emit_signal("group_changed");
+    p_card->emit_signal("group_changed", p_card);
 }
 
 int CardGroup::get_card_count() const {
